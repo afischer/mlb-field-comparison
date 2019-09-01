@@ -12,5 +12,8 @@
   "dependencies": {
     "d3": "^5.11.0",
     "js": "^0.1.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }

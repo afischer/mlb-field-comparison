@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>* { margin: 0; padding: 0;}
+    html, body { height: 100%; }
+    svg {
+      cursor: crosshair;
+    }
+    #team-select { display: inline-block; float: right; width: 40%; }
+    #infobox {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      border: 1px solid black;
+      float: right;
+      padding: 15px;
+      margin: 15px;
+    }
+    .division { display: inline-block; width: 150px; }
+    .division > div { margin-top: 15px; }</style>
+</head>
+
+<body>
+  <div id="infobox">
+    Ballpark: <span id="info-name"></span><br>
+    Team: <span id="info-team"></span><br>
+    Coords: (<span id="info-x"></span>, <span id="info-y"></span>) <br>
+    Dist from home: <span id="info-dist"> Ft</span>
+  </div>
+  <div id="team-select">
+    <h2>Stadiums!</h2>
+    <div class="division" id="AL">
+      <div id="AL-E"><h3>AL East</h3></div>
+      <div id="AL-C"><h3>AL Central</h3></div>
+      <div id="AL-W"><h3>AL West</h3></div>
+    </div>
+
+    <div class="division" id="NL">
+      <div id="NL-E"><h3>NL East</h3></div>
+      <div id="NL-C"><h3>NL Central</h3></div>
+      <div id="NL-W"><h3>NL West</h3></div>
+    </div>
+  </div>
+  <script src="/main.1f19ae8e.js" charset="utf-8"></script>
+</body>
+</html>
