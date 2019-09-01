@@ -1,5 +1,7 @@
 # MLB Field Analysis
 
+<img src="https://i.imgur.com/wrFoh3t.png" align="right" width="300px"/>
+
 A tool for comparing the outfields of Major League Baseball.
 
 Why? After hearing my dad complain that "that wouldn't have been a home run in `<stadium_name>`" enough times, I went looking for some data to find out how often he was actually right. I also wanted to learn D3.
