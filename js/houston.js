@@ -4,8 +4,8 @@ export default {
     city: 'Houston',
     name: 'Astros',
     color: '#002D62',
-    league: "AL",
-    division: "W",
+    league: 'AL',
+    division: 'W',
   },
   walls: [
     {
@@ -37,10 +37,10 @@ export default {
       max: 49.6,
       height: -1,
       r: (θ) => {
-        const d = 10525 - (725 * Math.cos(2 * θ))
-        const n1 = (3820575 * Math.cos(θ - 0.7417649)) - (263175 * Math.cos(θ + 0.7417649))
-        const n2 = 7424.6 * Math.sqrt(d - (263538 * Math.sin(θ - 0.7417649) ** 2))
-        return (n1 / d) + (n2 / d)
+        const d = 10525 - (725 * Math.cos(2 * θ));
+        const n1 = (3820575 * Math.cos(θ - 0.7417649)) - (263175 * Math.cos(θ + 0.7417649));
+        const n2 = 7424.6 * Math.sqrt(d - (263538 * Math.sin(θ - 0.7417649) ** 2));
+        return (n1 / d) + (n2 / d);
       },
     },
     {
@@ -61,5 +61,5 @@ export default {
       height: -1,
       r: (θ) => 315 / (Math.sin(θ) + (0.0366002 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

@@ -4,8 +4,8 @@ export default {
     city: 'San Diego',
     name: 'Padres',
     color: '#002D62',
-    league: "NL",
-    division: "W",
+    league: 'NL',
+    division: 'W',
   },
   walls: [
     {
@@ -74,5 +74,5 @@ export default {
       height: -1,
       r: (θ) => 336 / (Math.sin(θ) - (0.2134522 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

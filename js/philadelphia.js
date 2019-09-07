@@ -4,8 +4,8 @@ export default {
     city: 'Philadelphia',
     name: 'Phillies',
     color: '#e81828',
-    league: "NL",
-    division: "E",
+    league: 'NL',
+    division: 'E',
   },
   walls: [
     {
@@ -44,5 +44,5 @@ export default {
       height: -1,
       r: (θ) => 325 / (Math.sin(θ) - (0.596191 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

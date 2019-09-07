@@ -4,8 +4,8 @@ export default {
     city: 'Pittsburgh',
     name: 'Pirates',
     color: '#FDB827',
-    league: "NL",
-    division: "C",
+    league: 'NL',
+    division: 'C',
   },
   walls: [
     {
@@ -50,5 +50,5 @@ export default {
       height: -1,
       r: (θ) => 321 / (Math.sin(θ) - (0.75751 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

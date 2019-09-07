@@ -60,4 +60,4 @@ export default {
   texas,
   toronto,
   washington,
-}
+};

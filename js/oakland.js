@@ -4,8 +4,8 @@ export default {
     city: 'Oakland',
     name: 'Athletics',
     color: '#003831',
-    league: "AL",
-    division: "W",
+    league: 'AL',
+    division: 'W',
   },
   walls: [
     {
@@ -62,5 +62,5 @@ export default {
       height: -1,
       r: (θ) => 330 / (Math.sin(θ) - (0.3798 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

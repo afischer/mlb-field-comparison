@@ -4,8 +4,8 @@ export default {
     city: 'Texas',
     name: 'Rangers',
     color: '#003278',
-    league: "AL",
-    division: "W",
+    league: 'AL',
+    division: 'W',
   },
   walls: [
     {
@@ -56,5 +56,5 @@ export default {
       height: -1,
       r: (θ) => 331 / (Math.sin(θ) - (0.51319 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

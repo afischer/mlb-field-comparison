@@ -4,8 +4,8 @@ export default {
     city: 'Kansas City',
     name: 'Royals',
     color: '#004687',
-    league: "AL",
-    division: "C",
+    league: 'AL',
+    division: 'C',
   },
   walls: [
     {
@@ -58,8 +58,6 @@ export default {
       min: 82.7,
       max: 90,
       height: -1,
-      r: (θ) => 361.884 / (Math.sin(θ) + (0.01803985 * Math.cos(θ))),
-
       r: (θ) => {
         const d = 2897 - (975 * Math.cos((2 * θ) - 0.663225));
         const n1 = (958907 * Math.cos(θ - 1.441642)) - (322725 * Math.cos(θ + 0.7784168));
@@ -67,5 +65,5 @@ export default {
         return (n1 / d) + (n2 / d);
       },
     },
-  ]
-}
+  ],
+};

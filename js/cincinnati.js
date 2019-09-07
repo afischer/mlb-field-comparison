@@ -4,8 +4,8 @@ export default {
     city: 'Cincinnati',
     name: 'Reds',
     color: '#C6011F',
-    league: "NL",
-    division: "C",
+    league: 'NL',
+    division: 'C',
   },
   walls: [
     {
@@ -14,8 +14,8 @@ export default {
       height: -1,
       r: (θ) => {
         const d = 41212.25 - (30987.75 * Math.cos((2 * θ) - 3.31613));
-        const n1 = (11951552.5 * Math.cos(θ - 0.439823)) - (8986447.5 * Math.cos(θ - 2.8763026))
-        const n2 = (19212.09 * Math.sqrt(d - (168200 * (Math.sin(θ - 0.439823) ** 2))))
+        const n1 = (11951552.5 * Math.cos(θ - 0.439823)) - (8986447.5 * Math.cos(θ - 2.8763026));
+        const n2 = (19212.09 * Math.sqrt(d - (168200 * (Math.sin(θ - 0.439823) ** 2))));
         return (n1 / d) + (n2 / d);
       },
     },
@@ -37,5 +37,5 @@ export default {
       height: -1,
       r: (θ) => 326 / (Math.sin(θ) - (0.5206001 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

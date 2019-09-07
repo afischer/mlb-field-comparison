@@ -4,8 +4,8 @@ export default {
     city: 'Miami',
     name: 'Marlins',
     color: '#00A3E0',
-    league: "NL",
-    division: "E",
+    league: 'NL',
+    division: 'E',
   },
   walls: [
     {
@@ -140,5 +140,5 @@ export default {
       height: -1,
       r: (θ) => 337 / (Math.sin(θ) - (0.212114 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

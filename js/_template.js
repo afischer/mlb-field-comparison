@@ -4,8 +4,8 @@ export default {
     city: 'XXX',
     name: 'XXX',
     color: '#000000',
-    league: "",
-    division: "",
+    league: '',
+    division: '',
   },
   walls: [
     {
@@ -20,5 +20,5 @@ export default {
       height: -1,
       r: (θ) => X / (Math.sin(θ) + (X * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

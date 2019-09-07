@@ -4,8 +4,8 @@ export default {
     city: 'Toronto',
     name: 'Blue Jays',
     color: '#134A8E',
-    league: "AL",
-    division: "E",
+    league: 'AL',
+    division: 'E',
   },
   walls: [
     {
@@ -24,7 +24,7 @@ export default {
       min: 32.5,
       max: 57.5,
       height: -1,
-      r: (θ) => 400,
+      r: () => 400,
     },
     {
       min: 57.5,
@@ -38,5 +38,5 @@ export default {
       height: -1,
       r: (θ) => 328 / (Math.sin(θ) - (0.19012 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

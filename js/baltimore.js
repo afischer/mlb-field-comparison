@@ -4,8 +4,8 @@ export default {
     city: 'Baltimore',
     name: 'Orioles',
     color: '#DF4601',
-    league: "AL",
-    division: "E",
+    league: 'AL',
+    division: 'E',
   },
   walls: [
     {
@@ -32,5 +32,5 @@ export default {
       height: -1,
       r: (θ) => 331 / (Math.sin(θ) - (0.396914 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

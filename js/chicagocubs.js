@@ -4,8 +4,8 @@ export default {
     city: 'Chicago',
     name: 'Cubs',
     color: '#0C2340',
-    league: "NL",
-    division: "C",
+    league: 'NL',
+    division: 'C',
   },
   walls: [
     {
@@ -35,7 +35,7 @@ export default {
         const n1 = (9353823.75 * Math.cos(θ - 0.561996)) - (2540504.25 * Math.cos(θ - 2.5621433));
         const n2 = 22815.51 * (Math.sqrt(d - (155682 * (Math.sin(θ - 0.561996) ** 2))));
         return (n1 / d) + (n2 / d);
-      }
+      },
     },
     {
       min: 49.2,
@@ -55,5 +55,5 @@ export default {
       height: -1,
       r: (θ) => 355 / (Math.sin(θ) + (0.112061 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

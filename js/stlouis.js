@@ -4,8 +4,8 @@ export default {
     city: 'St. Louis',
     name: 'Cardinals',
     color: '#C41E3A',
-    league: "NL",
-    division: "C",
+    league: 'NL',
+    division: 'C',
   },
   walls: [
     {
@@ -50,5 +50,5 @@ export default {
       height: -1,
       r: (θ) => 330 / (Math.sin(θ) - (1.73033 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

@@ -4,8 +4,8 @@ export default {
     city: 'Chicago',
     name: 'White Sox',
     color: '#27251F',
-    league: "AL",
-    division: "C",
+    league: 'AL',
+    division: 'C',
   },
   walls: [
     {
@@ -68,5 +68,5 @@ export default {
       height: -1,
       r: (θ) => 327 / (Math.sin(θ) - (0.177146 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

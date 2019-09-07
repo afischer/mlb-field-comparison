@@ -4,8 +4,8 @@ export default {
     city: 'Los Angeles',
     name: 'Angels',
     color: '#BA0021',
-    league: "AL",
-    division: "W",
+    league: 'AL',
+    division: 'W',
   },
   walls: [
     {
@@ -80,5 +80,5 @@ export default {
       height: -1,
       r: (θ) => 328 / (Math.sin(θ) - (0.629411 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

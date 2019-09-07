@@ -4,8 +4,8 @@ export default {
     city: 'Seattle',
     name: 'Mariners',
     color: '#005C5C',
-    league: "AL",
-    division: "W",
+    league: 'AL',
+    division: 'W',
   },
   walls: [
     {
@@ -44,5 +44,5 @@ export default {
       height: -1,
       r: (θ) => 331 / (Math.sin(θ) - (0.6671 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

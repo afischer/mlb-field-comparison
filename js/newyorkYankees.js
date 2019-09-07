@@ -4,8 +4,8 @@ export default {
     city: 'New York',
     name: 'Yankees',
     color: '#003087',
-    league: "AL",
-    division: "E",
+    league: 'AL',
+    division: 'E',
   },
   walls: [
     {
@@ -24,7 +24,7 @@ export default {
       min: 4.9,
       max: 30.6,
       height: -1,
-      r: (θ) => 323.639 /  Math.cos(θ),
+      r: (θ) => 323.639 / Math.cos(θ),
     },
     {
       min: 30.6,
@@ -86,5 +86,5 @@ export default {
       height: -1,
       r: (θ) => 316 / (Math.sin(θ) - (0.6421415 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

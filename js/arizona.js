@@ -4,15 +4,15 @@ export default {
     city: 'Arizona',
     name: 'Diamondbacks',
     color: '#A71930',
-    league: "NL",
-    division: "W",
+    league: 'NL',
+    division: 'W',
   },
   walls: [
     {
       min: 0,
       max: 4.9,
       height: -1,
-      r: (θ) => - 389.4197 / (Math.sin(θ) - (1.1624468 * Math.cos(θ))),
+      r: (θ) => -389.4197 / (Math.sin(θ) - (1.1624468 * Math.cos(θ))),
     },
     {
       min: 4.9,
@@ -98,5 +98,5 @@ export default {
       height: -1,
       r: (θ) => 327 / (Math.sin(θ) - (0.9060869 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

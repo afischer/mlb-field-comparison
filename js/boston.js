@@ -4,8 +4,8 @@ export default {
     city: 'Boston',
     name: 'Red Sox',
     color: '#BD3039',
-    league: "AL",
-    division: "E",
+    league: 'AL',
+    division: 'E',
   },
   walls: [
     {
@@ -68,5 +68,5 @@ export default {
       height: -1,
       r: (θ) => 306 / (Math.sin(θ) + (0.00577087 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

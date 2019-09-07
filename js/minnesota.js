@@ -4,8 +4,8 @@ export default {
     city: 'Minnesota',
     name: 'Twins',
     color: '#002B5C',
-    league: "AL",
-    division: "C",
+    league: 'AL',
+    division: 'C',
   },
   walls: [
     {
@@ -38,5 +38,5 @@ export default {
       height: -1,
       r: (θ) => 339 / (Math.sin(θ) - (0.05451 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

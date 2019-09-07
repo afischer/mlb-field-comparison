@@ -4,8 +4,8 @@ export default {
     city: 'Colorado',
     name: 'Rockies',
     color: '#33006F',
-    league: "NL",
-    division: "W",
+    league: 'NL',
+    division: 'W',
   },
   walls: [
     {
@@ -32,5 +32,5 @@ export default {
       height: -1,
       r: (θ) => 345 / (Math.sin(θ) - (0.08135 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

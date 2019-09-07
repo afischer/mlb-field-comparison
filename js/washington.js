@@ -4,8 +4,8 @@ export default {
     city: 'Washington',
     name: 'Nationals',
     color: '#AB0003',
-    league: "NL",
-    division: "E",
+    league: 'NL',
+    division: 'E',
   },
   walls: [
     {
@@ -56,5 +56,5 @@ export default {
       height: -1,
       r: (θ) => 336 / (Math.sin(θ) - (0.221987 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

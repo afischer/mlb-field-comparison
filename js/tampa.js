@@ -4,8 +4,8 @@ export default {
     city: 'Tampa Bay',
     name: 'Rays',
     color: '#092C5C',
-    league: "AL",
-    division: "E",
+    league: 'AL',
+    division: 'E',
   },
   walls: [
     {
@@ -56,5 +56,5 @@ export default {
       height: -1,
       r: (θ) => 315 / (Math.sin(θ) - (1.13533 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

@@ -4,8 +4,8 @@ export default {
     city: 'San Francisco',
     name: 'Giants',
     color: '#FD5A1E',
-    league: "NL",
-    division: "W",
+    league: 'NL',
+    division: 'W',
   },
   walls: [
     {
@@ -44,5 +44,5 @@ export default {
       height: -1,
       r: (θ) => 335 / (Math.sin(θ) - (0.513097 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

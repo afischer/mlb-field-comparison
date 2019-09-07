@@ -4,8 +4,8 @@ export default {
     city: 'Milwaukee',
     name: 'Brewers',
     color: '#B6922E',
-    league: "NL",
-    division: "C",
+    league: 'NL',
+    division: 'C',
   },
   walls: [
     {
@@ -68,5 +68,5 @@ export default {
       height: -1,
       r: (θ) => 334 / (Math.sin(θ) - (0.435742 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

@@ -4,8 +4,8 @@ export default {
     city: 'New York',
     name: 'Mets',
     color: '#002D72',
-    league: "NL",
-    division: "E",
+    league: 'NL',
+    division: 'E',
   },
   walls: [
     {
@@ -62,5 +62,5 @@ export default {
       height: -1,
       r: (θ) => 335 / (Math.sin(θ) - (0.30194697 * Math.cos(θ))),
     },
-  ]
-}
+  ],
+};

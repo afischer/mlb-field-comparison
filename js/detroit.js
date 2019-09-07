@@ -4,8 +4,8 @@ export default {
     city: 'Detroit',
     name: 'Tigers',
     color: '#FA4616',
-    league: "AL",
-    division: "C",
+    league: 'AL',
+    division: 'C',
   },
   walls: [
     {
@@ -44,5 +44,5 @@ export default {
       height: -1,
       r: (θ) => 345 / Math.sin(θ),
     },
-  ]
-}
+  ],
+};
