@@ -28773,14 +28773,16 @@ var _default = {
   walls: [{
     min: 0,
     max: 18,
-    height: -1,
+    height: 8.333,
+    // 8ft, 4in
     r: function r(θ) {
       return -1169.68 / (Math.sin(θ) - 3.541407 * Math.cos(θ));
     }
   }, {
     min: 18,
     max: 90,
-    height: -1,
+    height: 8.333,
+    // 8ft, 4in
     r: function r(θ) {
       var d = 101074 - 17024 * Math.cos(2 * θ + 1.43117);
       var n1 = 19537604.2 * Math.cos(θ - 0.7661995) - 3290739.2 * Math.cos(θ + 2.1973695);
@@ -28856,70 +28858,71 @@ var _default = {
   walls: [{
     min: 0,
     max: 3.8,
-    height: -1,
+    height: 5,
+    // COMBAK this is actually a slope
     r: function r(θ) {
       return -119.0423 / (Math.sin(θ) - 0.3941798 * Math.cos(θ));
     }
   }, {
     min: 3.8,
     max: 4.9,
-    height: -1,
+    height: 5,
     r: function r(θ) {
       return -402.289 / (Math.sin(θ) - 1.17404 * Math.cos(θ));
     }
   }, {
     min: 4.9,
     max: 6,
-    height: -1,
+    height: 5,
     r: function r(θ) {
       return -808.953 / (Math.sin(θ) - 2.274195 * Math.cos(θ));
     }
   }, {
     min: 6,
     max: 7.1,
-    height: -1,
+    height: 3,
     r: function r(θ) {
       return -2332.79083 / (Math.sin(θ) - 6.3601456 * Math.cos(θ));
     }
   }, {
     min: 7.1,
     max: 8.1,
-    height: -1,
+    height: 3,
     r: function r(θ) {
       return -20759.85313 / (Math.sin(θ) - 55.616 * Math.cos(θ));
     }
   }, {
     min: 8.1,
     max: 31,
-    height: -1,
+    height: 5,
     r: function r(θ) {
       return 1129.33168 / (Math.sin(θ) + 2.875435 * Math.cos(θ));
     }
   }, {
     min: 31,
     max: 33.8,
-    height: -1,
+    height: 5,
     r: function r(θ) {
       return -417.143116 / (Math.sin(θ) - 1.8849057 * Math.cos(θ));
     }
   }, {
     min: 33.8,
     max: 52.2,
-    height: -1,
+    height: 17,
     r: function r(θ) {
       return 431.2604 / (Math.sin(θ) + 0.587157 * Math.cos(θ));
     }
   }, {
     min: 52.2,
     max: 53.1,
-    height: -1,
+    height: 37,
     r: function r(θ) {
       return 2077.8716 / (Math.sin(θ) + 7.7513156 * Math.cos(θ));
     }
   }, {
     min: 53.1,
     max: 90,
-    height: -1,
+    height: 37,
     r: function r(θ) {
       return 306 / (Math.sin(θ) + 0.00577087 * Math.cos(θ));
     }
@@ -29565,147 +29568,147 @@ var _default = {
   walls: [{
     min: 0,
     max: 4.2,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return -443.8081 / (Math.sin(θ) - 1.344873 * Math.cos(θ));
     }
   }, {
     min: 4.2,
     max: 7.8,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return -829.5118 / (Math.sin(θ) - 2.44985 * Math.cos(θ));
     }
   }, {
     min: 7.8,
     max: 9.5,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return -10942.3745 / (Math.sin(θ) - 30.610819 * Math.cos(θ));
     }
   }, {
     min: 9.5,
     max: 25.1,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 1719.756 / (Math.sin(θ) + 4.622957 * Math.cos(θ));
     }
   }, {
     min: 25.1,
     max: 31.1,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 1115.073 / (Math.sin(θ) + 2.83277 * Math.cos(θ));
     }
   }, {
     min: 31.1,
     max: 42.6,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 928.868 / (Math.sin(θ) + 2.258998 * Math.cos(θ));
     }
   }, {
     min: 42.6,
     max: 44,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 742.26267 / (Math.sin(θ) + 1.620443 * Math.cos(θ));
     }
   }, {
     min: 44,
     max: 46.3,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 562.6864 / (Math.sin(θ) + 0.9947777 * Math.cos(θ));
     }
   }, {
     min: 46.3,
     max: 49.2,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 472.8006 / (Math.sin(θ) + 0.66870534 * Math.cos(θ));
     }
   }, {
     min: 49.2,
     max: 55.3,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 423.6147 / (Math.sin(θ) + 0.478618 * Math.cos(θ));
     }
   }, {
     min: 55.3,
     max: 59,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 395.1176 / (Math.sin(θ) + 0.349269 * Math.cos(θ));
     }
   }, {
     min: 59,
     max: 63.1,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 392.2193 / (Math.sin(θ) + 0.3344991 * Math.cos(θ));
     }
   }, {
     min: 63.1,
     max: 69.2,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 381.7462 / (Math.sin(θ) + 0.2729345 * Math.cos(θ));
     }
   }, {
     min: 69.2,
     max: 74.7,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 372.8431 / (Math.sin(θ) + 0.2051737 * Math.cos(θ));
     }
   }, {
     min: 74.7,
     max: 80.5,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 368.8506 / (Math.sin(θ) + 0.163833 * Math.cos(θ));
     }
   }, {
     min: 80.5,
     max: 82.1,
-    height: -1,
+    height: 8,
     r: function r(θ) {
       return 362.2344 / (Math.sin(θ) + 0.053704 * Math.cos(θ));
     }
   }, {
     min: 82.1,
     max: 83.3,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return 353.007 / (Math.sin(θ) - 0.131245 * Math.cos(θ));
     }
   }, {
     min: 83.3,
     max: 85.6,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return 334.774 / (Math.sin(θ) - 0.564136 * Math.cos(θ));
     }
   }, {
     min: 85.6,
     max: 87.2,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return 333.006 / (Math.sin(θ) - 0.620807 * Math.cos(θ));
     }
   }, {
     min: 87.2,
     max: 88.4,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return 328.317 / (Math.sin(θ) - 0.90885 * Math.cos(θ));
     }
   }, {
     min: 88.4,
     max: 90,
-    height: -1,
+    height: 4,
     r: function r(θ) {
       return 330 / (Math.sin(θ) - 0.720958 * Math.cos(θ));
     }
@@ -31106,8 +31109,6 @@ var d3 = _interopRequireWildcard(require("d3"));
 
 var _js = _interopRequireDefault(require("./js"));
 
-var _this = void 0;
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -31124,27 +31125,39 @@ var sluggify = function sluggify(str) {
   return str.replace(' ', '-');
 };
 
+var toRad = function toRad(deg) {
+  return deg * Math.PI / 180;
+};
+
+var polarToCart = function polarToCart(r, θ) {
+  var x = r * Math.cos(θ);
+  var y = r * Math.sin(θ);
+  return [x, y];
+};
+
+var outfieldGroup;
+var wallGroup;
 var margin = {
   top: 5,
   right: 5,
   bottom: 5,
   left: 5
 };
-var width = 450 - margin.left - margin.right;
-var height = 450 - margin.top - margin.bottom;
+var svgWidth = 450 - margin.left - margin.right;
+var svgHeight = 450 - margin.top - margin.bottom;
 
-function setup(group) {
+function setup() {
   // create group with flipped coordinate system, insets
   var plotSq = function plotSq(x, y, r) {
     var fill = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'black';
-    return group.append('rect').attr('x', x).attr('y', y).attr('width', r).attr('height', r).style('fill', fill);
+    return outfieldGroup.append('rect').attr('x', x).attr('y', y).attr('width', r).attr('height', r).style('fill', fill);
   };
 
   var plotCirc = function plotCirc(cx, cy, r) {
     var fill = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'transparent';
     var strokeWidth = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
     var strokeColor = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 'black';
-    return group.append('ellipse').attr('cx', cx).attr('cy', cy).attr('rx', r).attr('ry', r).style('fill', fill).attr('stroke-width', strokeWidth).attr('stroke', strokeColor);
+    return outfieldGroup.append('ellipse').attr('cx', cx).attr('cy', cy).attr('rx', r).attr('ry', r).style('fill', fill).attr('stroke-width', strokeWidth).attr('stroke', strokeColor);
   };
 
   plotCirc(48, 48, 95, '#cfbaa5'); // skinned infield, front of rubber, 95
@@ -31163,8 +31176,8 @@ function setup(group) {
   plotCirc(47, 47, 18, '#cfbaa5'); // pitching mound, 59 ft from home, 18ft
   // foul lines
 
-  group.append('line').attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', 375).attr('stroke-width', 2).attr('stroke', 'grey');
-  group.append('line').attr('x1', 0).attr('y1', 0).attr('x2', 375).attr('y2', 0).attr('stroke-width', 2).attr('stroke', 'grey'); // bases
+  outfieldGroup.append('line').attr('x1', 0).attr('y1', 0).attr('x2', 0).attr('y2', 375).attr('stroke-width', 2).attr('stroke', 'grey');
+  outfieldGroup.append('line').attr('x1', 0).attr('y1', 0).attr('x2', 375).attr('y2', 0).attr('stroke-width', 2).attr('stroke', 'grey'); // bases
 
   var baseWidth = 6; // px width of square bases
 
@@ -31181,24 +31194,17 @@ function setup(group) {
   plotSq(0, 90 - baseOffset, baseWidth, 'white');
 }
 
-function toRad(deg) {
-  return deg * Math.PI / 180;
-}
-
-function polarToCart(r, θ) {
-  var x = r * Math.cos(θ);
-  var y = r * Math.sin(θ);
-  return [x, y];
-}
-
 var tupleToPolyline = d3.line().x(function (d) {
   return d[0];
 }).y(function (d) {
   return d[1];
 });
+var HEIGHT_SCALE_FACTOR = 1.34;
 
-function plotField(fieldData, group) {
+function plotField(fieldData) {
   var lineData = []; // list of [x, y] 'tuples' generated below
+
+  var heightData = [];
 
   var _loop = function _loop(i) {
     // wow computers are fast!
@@ -31207,18 +31213,24 @@ function plotField(fieldData, group) {
           max = wallSegment.max;
       return i + 1 >= min && i < max;
     });
-    var r = wallData.r; // get cartesian point tuples for each
+    var r = wallData.r,
+        height = wallData.height; // get cartesian point tuples for each
 
-    var point = polarToCart(r(toRad(i)), toRad(i + 1));
-    lineData.push(point);
+    var point = polarToCart(r(toRad(i)), toRad(i + 1)); // push outfield dimension data
+
+    lineData.push(point); // push wall height data
+
+    heightData.push([Math.pow(90 - (i + 1), HEIGHT_SCALE_FACTOR), Math.pow(height, HEIGHT_SCALE_FACTOR)]);
   };
 
   for (var i = -1; i < 90; i += 1) {
     _loop(i);
-  } // and graph
+  } // graph walls
 
 
-  var wall = group.append('path').data([lineData]).attr('d', tupleToPolyline).attr('stroke', fieldData.team.color).attr('stroke-width', 1).attr('stroke-linejoin', 'round').attr('fill', 'none').attr('opacity', 0.5).attr('data-park-name', fieldData.name).attr('data-team-name', fieldData.team.name);
+  var wall = outfieldGroup.append('path').data([lineData]).attr('d', tupleToPolyline).attr('stroke', fieldData.team.color).attr('stroke-width', 1).attr('stroke-linejoin', 'round').attr('fill', 'none').attr('opacity', 0.5).attr('data-park-name', fieldData.name).attr('data-team-name', fieldData.team.name); // graph heights
+
+  var wallHeight = wallGroup.append('path').data([heightData]).attr('d', tupleToPolyline).attr('stroke', fieldData.team.color).attr('stroke-width', 1).attr('stroke-linejoin', 'round').attr('fill', 'none').attr('opacity', 0.5).attr('data-park-name', fieldData.name).attr('data-team-name', fieldData.team.name);
   wall.on('mouseover', function () {
     document.getElementById('info-name').innerHTML = wall.attr('data-park-name');
     document.getElementById('info-team').innerHTML = wall.attr('data-team-name');
@@ -31251,9 +31263,11 @@ function setAllChecked(isChecked) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var svg = d3.select('#diagram').append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom);
-  var group = svg.append('g').attr('transform', "translate(".concat(margin.left, ",").concat(height + margin.top, ") scale(1,-1)"));
-  setup(group);
+  var outfieldSvg = d3.select('#diagram').append('svg').attr('width', svgWidth + margin.left + margin.right).attr('height', svgHeight + margin.top + margin.bottom);
+  var wallSvg = d3.select('#diagram').append('svg').attr('width', svgWidth + margin.left + margin.right).attr('height', 150 + margin.top + margin.bottom);
+  outfieldGroup = outfieldSvg.append('g').attr('transform', "translate(".concat(margin.left, ",").concat(svgHeight + margin.top, ") scale(1,-1)"));
+  wallGroup = wallSvg.append('g').attr('transform', "translate(".concat(margin.left, ",").concat(150 + margin.top, ") scale(1,-1)"));
+  setup();
   d3.select('#select-all').on('click', function () {
     return setAllChecked(true);
   });
@@ -31261,7 +31275,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return setAllChecked(false);
   });
   Object.values(_js.default).forEach(function (field) {
-    plotField(field, group);
+    plotField(field);
     var _field$team = field.team,
         league = _field$team.league,
         division = _field$team.division,
@@ -31273,8 +31287,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var xPosSpan = document.getElementById('info-x');
   var yPosSpan = document.getElementById('info-y');
   var distSpan = document.getElementById('info-dist');
-  svg.on('mousemove', function () {
-    var _d3$mouse = d3.mouse(_this),
+  outfieldSvg.on('mousemove', function () {
+    // eslint-disable-line func-names
+    var _d3$mouse = d3.mouse(this),
         _d3$mouse2 = _slicedToArray(_d3$mouse, 2),
         mx = _d3$mouse2[0],
         my = _d3$mouse2[1];
@@ -31314,7 +31329,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54443" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56277" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
