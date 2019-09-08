@@ -3,19 +3,29 @@ import fields from './js';
 
 const sluggify = (str) => str.replace(' ', '-');
 
+const toRad = (deg) => (deg * Math.PI) / 180;
+const polarToCart = (r, θ) => {
+  const x = r * Math.cos(θ);
+  const y = r * Math.sin(θ);
+  return [x, y];
+};
+
+let outfieldGroup;
+let wallGroup;
+
 const margin = {
   top: 5,
   right: 5,
   bottom: 5,
   left: 5,
 };
-const width = (450 - margin.left - margin.right);
-const height = 450 - margin.top - margin.bottom;
+const svgWidth = (450 - margin.left - margin.right);
+const svgHeight = 450 - margin.top - margin.bottom;
 
-function setup(group) {
+function setup() {
   // create group with flipped coordinate system, insets
 
-  const plotSq = (x, y, r, fill = 'black') => group.append('rect')
+  const plotSq = (x, y, r, fill = 'black') => outfieldGroup.append('rect')
     .attr('x', x)
     .attr('y', y)
     .attr('width', r)
@@ -29,7 +39,7 @@ function setup(group) {
     fill = 'transparent',
     strokeWidth = 0,
     strokeColor = 'black',
-  ) => group.append('ellipse')
+  ) => outfieldGroup.append('ellipse')
     .attr('cx', cx)
     .attr('cy', cy)
     .attr('rx', r)
@@ -51,7 +61,7 @@ function setup(group) {
   plotCirc(47, 47, 18, '#cfbaa5'); // pitching mound, 59 ft from home, 18ft
 
   // foul lines
-  group.append('line')
+  outfieldGroup.append('line')
     .attr('x1', 0)
     .attr('y1', 0)
     .attr('x2', 0)
@@ -59,7 +69,7 @@ function setup(group) {
     .attr('stroke-width', 2)
     .attr('stroke', 'grey');
 
-  group.append('line')
+  outfieldGroup.append('line')
     .attr('x1', 0)
     .attr('y1', 0)
     .attr('x2', 375)
@@ -83,37 +93,45 @@ function setup(group) {
   plotSq(0, 90 - baseOffset, baseWidth, 'white');
 }
 
-function toRad(deg) {
-  return (deg * Math.PI) / 180;
-}
-
-function polarToCart(r, θ) {
-  const x = r * Math.cos(θ);
-  const y = r * Math.sin(θ);
-  return [x, y];
-}
-
 const tupleToPolyline = d3.line()
   .x((d) => d[0])
   .y((d) => d[1]);
 
-function plotField(fieldData, group) {
+const HEIGHT_SCALE_FACTOR = 1.34;
+
+function plotField(fieldData) {
   const lineData = []; // list of [x, y] 'tuples' generated below
+  const heightData = [];
 
   for (let i = -1; i < 90; i += 1) { // wow computers are fast!
     const wallData = fieldData.walls.find((wallSegment) => {
       const { min, max } = wallSegment;
       return i + 1 >= min && i < max;
     });
-    const { r } = wallData;
+    const { r, height } = wallData;
     // get cartesian point tuples for each
     const point = polarToCart(r(toRad(i)), toRad(i + 1));
+    // push outfield dimension data
     lineData.push(point);
+    // push wall height data
+    heightData.push([(90 - (i + 1)) ** HEIGHT_SCALE_FACTOR, height ** HEIGHT_SCALE_FACTOR]);
   }
 
-  // and graph
-  const wall = group.append('path')
+  // graph walls
+  const wall = outfieldGroup.append('path')
     .data([lineData])
+    .attr('d', tupleToPolyline)
+    .attr('stroke', fieldData.team.color)
+    .attr('stroke-width', 1)
+    .attr('stroke-linejoin', 'round')
+    .attr('fill', 'none')
+    .attr('opacity', 0.5)
+    .attr('data-park-name', fieldData.name)
+    .attr('data-team-name', fieldData.team.name);
+
+  // graph heights
+  const wallHeight = wallGroup.append('path')
+    .data([heightData])
     .attr('d', tupleToPolyline)
     .attr('stroke', fieldData.team.color)
     .attr('stroke-width', 1)
@@ -157,21 +175,29 @@ function setAllChecked(isChecked) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const svg = d3.select('#diagram')
+  const outfieldSvg = d3.select('#diagram')
     .append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom);
+    .attr('width', svgWidth + margin.left + margin.right)
+    .attr('height', svgHeight + margin.top + margin.bottom);
 
-  const group = svg.append('g')
-    .attr('transform', `translate(${margin.left},${height + margin.top}) scale(1,-1)`);
+  const wallSvg = d3.select('#diagram')
+    .append('svg')
+    .attr('width', svgWidth + margin.left + margin.right)
+    .attr('height', 150 + margin.top + margin.bottom);
 
-  setup(group);
+  outfieldGroup = outfieldSvg.append('g')
+    .attr('transform', `translate(${margin.left},${svgHeight + margin.top}) scale(1,-1)`);
+
+  wallGroup = wallSvg.append('g')
+    .attr('transform', `translate(${margin.left},${150 + margin.top}) scale(1,-1)`);
+
+  setup();
 
   d3.select('#select-all').on('click', () => setAllChecked(true));
   d3.select('#deselect-all').on('click', () => setAllChecked(false));
 
   Object.values(fields).forEach((field) => {
-    plotField(field, group);
+    plotField(field);
 
     const { league, division, city } = field.team;
 
@@ -196,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const yPosSpan = document.getElementById('info-y');
   const distSpan = document.getElementById('info-dist');
 
-  svg.on('mousemove', (() => {
+  outfieldSvg.on('mousemove', (function () { // eslint-disable-line func-names
     const [mx, my] = d3.mouse(this);
     const xPos = mx - margin.left;
     const yPos = 450 - my - margin.top;
